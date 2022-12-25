@@ -11,9 +11,17 @@ nitro-cli terminate-enclave --all && docker build -t ssh-test:latest . \
 
 SSH Vsock bridge (https://stefano-garzarella.github.io/posts/2021-01-22-socat-vsock/)
 
-3. On Ec2 Host: socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
-4. On Ec2 Host: ssh -p 4321 root@localhost -i sshkey
+3. On Ec2 Host: 
+```console
+socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
+```
+
+
+4. On Ec2 Host: 
+```console
+ ssh -p 4321 root@localhost -i sshkey
 **root@(none):~#**
+```
 
 
 ### Debug RCE Feature: (requires run-enclave in --debug-mode to connect to console)
@@ -22,7 +30,6 @@ SSH Vsock bridge (https://stefano-garzarella.github.io/posts/2021-01-22-socat-vs
 ./ncat --vsock 19 5005
 >>> whoami
 ```
-
 
 #### On Ec2 Host: 
 ```console
