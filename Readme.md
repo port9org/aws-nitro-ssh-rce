@@ -1,4 +1,4 @@
-This repository is intended to simplify experimentation with aws nitro enclaves. 
+### This repository is intended to simplify experimentation with aws nitro enclaves. 
 
 1. clone repo
 2. build docker image, convert to nitro.eif, start enclave:
@@ -9,7 +9,7 @@ nitro-cli terminate-enclave --all && docker build -t ssh-test:latest . \
 && nitro-cli run-enclave --cpu-count 2 --memory 3072 --eif-path ssh-test.eif --debug-mode --enclave-cid 19
 ```
 
-SSH Vsock bridge (https://stefano-garzarella.github.io/posts/2021-01-22-socat-vsock/)
+### SSH Vsock bridge (https://stefano-garzarella.github.io/posts/2021-01-22-socat-vsock/)
 
 3. On Ec2 Host: 
 ```console
