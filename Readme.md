@@ -24,8 +24,11 @@ SSH Vsock bridge (https://stefano-garzarella.github.io/posts/2021-01-22-socat-vs
 ```
 
 
-#### On Ec2 Host: nitro-cli  console --enclave-name=ssh-test
+#### On Ec2 Host: 
 ```console
+nitro-cli  console --enclave-name=ssh-test
+Connecting to the console for enclave 19...
+Successfully connected to the console.
 <<< root
 ```
 
