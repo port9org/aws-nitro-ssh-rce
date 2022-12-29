@@ -1,7 +1,7 @@
-### This repository is intended to simplify experimentation with aws nitro enclaves. 
+### This Repository is intended to simplify experimentation with aws nitro enclaves. 
 
-1. clone repo
-2. build docker image, convert to nitro.eif, start enclave:
+1. Clone repo
+2. Build docker image, convert to nitro.eif, start enclave:
 
 ```console
 nitro-cli terminate-enclave --all && docker build -t ssh-test:latest . \
@@ -21,8 +21,9 @@ socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
 ```console
  ssh -p 4321 root@localhost -i sshkey
 **root@(none):~#**
-```
 
+
+---------------
 
 ### 2. Debug RCE Feature: (requires run-enclave in --debug-mode to connect to console)
 #### On Ec2 Host: 
@@ -38,7 +39,6 @@ Connecting to the console for enclave 19...
 Successfully connected to the console.
 <<< root
 ```
-
 
 ### Random commands / Troubleshoot
 	- Nitro-cli terminate-enclave --all 
