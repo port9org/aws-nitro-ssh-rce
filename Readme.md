@@ -21,12 +21,10 @@ socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
 ```console
  ssh -p 4321 root@localhost -i sshkey
 **root@(none):~#**
+```
 
-
----------------
-
-
-### 2. Debug RCE Feature: (requires run-enclave in --debug-mode to connect to console)
+ 
+###2. Debug RCE Feature: (requires run-enclave in --debug-mode to connect to console)
 
 #### On Ec2 Host: 
 ```console
