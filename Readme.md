@@ -23,22 +23,25 @@ socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
 **root@(none):~#**
 ```
 
- 
-###2. Debug RCE Feature: (requires run-enclave in --debug-mode to connect to console)
+------------------------------------------
 
-#### On Ec2 Host: 
+
+### 2. Debug RCE Feature: (requires run-enclave in --debug-mode to connect to console)
+
+1. On Ec2 Host: 
 ```console
 ./ncat --vsock 19 5005
 >>> whoami
 ```
 
-#### On Ec2 Host: 
+2. On Ec2 Host: 
 ```console
 nitro-cli  console --enclave-name=ssh-test
 Connecting to the console for enclave 19...
 Successfully connected to the console.
 <<< root
 ```
+------------------------------------------
 
 ### Random commands / Troubleshoot
 	- Nitro-cli terminate-enclave --all 
