@@ -13,7 +13,7 @@ nitro-cli terminate-enclave --all && docker build -t ssh-test:latest . \
 
 1. On Ec2 Host: 
 ```console
-socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
+socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:19:22
 ```
 
 
@@ -23,6 +23,7 @@ socat TCP4-LISTEN:4321,reuseaddr,fork VSOCK-CONNECT:42:22
 **root@(none):~#**
 ```
 
+Note: Enclave-CID needs to match on nitro-cli and socat.
 ------------------------------------------
 
 
